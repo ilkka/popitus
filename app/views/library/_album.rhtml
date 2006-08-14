@@ -1,0 +1,1 @@
+<li><%= link_to album, URI::escape("/#{artist}/#{album}", LibraryController::unsafe) %> (<%= link_to 'soita', URI::escape("/play/#{@current_artist}/#{album}", LibraryController::unsafe) %>)</li>
