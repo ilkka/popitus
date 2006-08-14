@@ -1,0 +1,58 @@
+/* layout */
+/* aped from http://www.intensivstation.ch/files/en_templates/temp03.html 
+ * (licensed under creative commons attribution license) */
+
+body > div {
+	margin: 0;
+	top: 80px;
+	bottom: 20px;
+	/*padding: 0 0 20px 0;*/ /* this gives us a sort of bottom margin */
+}
+
+#lcol {
+	position: absolute;
+	left: 1%;
+	width: 22%;
+	overflow: auto;
+}
+
+#mcol {
+	position: absolute;
+	left: 24%;
+	width: 37%;
+	overflow: auto;
+}
+
+#rcol {
+	position: absolute;
+	left: 62%;
+	width: 37%;
+	overflow: auto;
+}
+
+div.slot {
+	margin: 5px 0;
+	padding: 0 5px;
+}
+
+/* colors and borders */
+
+body {
+	background: #565f81;
+	color: #fff;
+}
+
+div.slot {
+	border: 1px solid #2b2f40;
+	/*background: #929bc1;*/
+	background: #AAAEC1;
+	color: #000;
+}
+
+/* typography */
+
+body {
+	font-family: sans-serif;
+	font-size: 80%;
+}
+

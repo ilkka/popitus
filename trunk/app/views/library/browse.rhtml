@@ -1,0 +1,39 @@
+<h1>Selaa poppia</h1>
+
+<div id="lcol">
+<% if @artists != nil %>
+  <div id="artists" class="slot">
+    <h2>Artistit</h2>
+    <ul>
+      <%= render :partial => 'artist', :collection => @artists %>
+    </ul>
+  </div>
+<% end %>
+  <div id="noticebox" class="slot">
+    <p>Popitus &copy; 2005 Ilkka Poutanen, all rights reserved.</p>
+  </div>
+</div>
+
+<div id="mcol">
+<% if @current_artist != nil %>
+  <div id="albums" class="slot">
+    <h2>Albumit artistilta <%= @current_artist %></h2>
+    <ul>
+      <%= render :partial => 'album', :collection => @albums_by_artist, :locals => { :artist => @current_artist } %>
+    </ul>
+  </div>
+<% end %>
+</div>
+
+<div id="rcol">
+<% if @current_album != nil %>
+  <div id="tracks" class="slot">
+    <h2><%= @current_album %></h2>
+    <p><%= link_to 'Soita kokonaan', "/play/#{@current_artist}/#{@current_album}" %></p>
+    <ol>
+      <%= render :partial => 'track', :collection => @tracks, :locals => { :artist => @current_artist, :album => @current_album } %>
+    </ol>
+  </div>
+<% end %>
+</div>
+
