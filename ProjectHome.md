@@ -1,0 +1,1 @@
+Popitus is a very simple web jukebox implemented with Ruby on Rails. It doesn't use music metadata at all (yet) but instead relies on directory hierarchy. An Sqlite3 database is used for storing passwords for authentication. It currently streams mp3, ogg and m4a files.
